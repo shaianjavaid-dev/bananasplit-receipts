@@ -1,6 +1,11 @@
+# Render blueprint for Bananasplit receipts (static site).
+# Deploy: Render → New → Blueprint → pick this repo → Apply.
+# After that, every `git push` to main auto-deploys.
 services:
   - type: web
     name: bananasplit-receipts
     runtime: static
+    plan: free
+    branch: main
     staticPublishPath: ./
     pullRequestPreviewsEnabled: false
