@@ -2,56 +2,42 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Hailey's receipt · Bananasplit</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
+:root{--mono:'JetBrains Mono',monospace;--venmo:#008CFF}
 *{margin:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{background:#e9e8e4;font-family:Inter,system-ui,sans-serif;color:#16150f;display:flex;justify-content:center;
-min-height:100vh;padding:28px 16px calc(28px + env(safe-area-inset-bottom))}
-.card{width:100%;max-width:390px;background:#fdfcf9;border-radius:24px;overflow:hidden;
-box-shadow:0 30px 70px -24px rgba(40,38,34,.5);align-self:flex-start}
-.tape{background:linear-gradient(180deg,#f4bb3f,#eaad2e);text-align:center;padding:9px;position:relative;
-font-family:Fraunces,serif;font-weight:600;font-size:12px;letter-spacing:.22em;color:#3a2c00}
-.tape::before,.tape::after{content:"";position:absolute;left:0;right:0;height:4px;
-background:repeating-linear-gradient(90deg,rgba(255,255,255,.35) 0 9px,rgba(0,0,0,.06) 9px 18px)}
-.tape::before{top:0}.tape::after{bottom:0}
-.pad{padding:26px 24px 22px}
-.brand{font-family:Fraunces,serif;font-weight:600;font-size:24px;text-align:center;letter-spacing:-.01em}
-.sub{text-align:center;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#9a968c;margin-top:5px}
-.meta{font-family:"JetBrains Mono",monospace;font-size:11px;color:#8a877f;line-height:2;margin:20px 0 4px}
-.meta .r{display:flex;justify-content:space-between}
-.meta b{color:#16150f;font-weight:500}
-.rule{border:0;border-top:1px dashed #ddd9cf;margin:14px 0}
-.items{font-family:"JetBrains Mono",monospace}
-.it{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;padding:8px 0;color:#34332c}
-.it .sub2{font-size:10px;color:#a8a497;margin-left:7px}
-.it .v{font-variant-numeric:tabular-nums;font-weight:500;color:#16150f}
-.tot{display:flex;justify-content:space-between;align-items:baseline;margin-top:6px}
-.tot .l{font-family:Fraunces,serif;font-weight:600;font-size:17px}
-.tot .v{font-family:Fraunces,serif;font-weight:600;font-size:30px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-.pay{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:20px;
-background:#008CFF;color:#fff;text-decoration:none;font-weight:600;font-size:16px;
-padding:17px;border-radius:14px;box-shadow:0 12px 24px -8px rgba(0,140,255,.6)}
+body{background:linear-gradient(180deg,#f4bb3f,#eaad2e);min-height:100vh;display:flex;justify-content:center;
+font-family:var(--mono);-webkit-font-smoothing:antialiased;padding:34px 16px calc(34px + env(safe-area-inset-bottom))}
+.receipt{width:100%;max-width:380px;color:#2b2b2b;align-self:flex-start;position:relative;overflow:hidden;
+padding:34px 28px 34px;box-shadow:0 34px 56px -22px rgba(0,0,0,.4);
+background:linear-gradient(102deg,transparent 55%,rgba(0,0,0,.04) 56.5%,rgba(255,255,255,.45) 57.5%,transparent 59%),linear-gradient(180deg,#ffffff,#f6f5f1)}
+.store{font-size:42px;font-weight:800;font-style:italic;letter-spacing:-1.5px;text-transform:lowercase;color:#1f1f1f;line-height:.98;text-align:center}
+.addr{font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:#6c6c6c;text-align:center;margin-top:10px;line-height:1.7}
+.meta{display:flex;justify-content:center;gap:22px;font-size:10.5px;letter-spacing:1px;color:#555;margin-top:9px;text-transform:uppercase}
+.barcode{height:52px;width:64%;margin:18px auto 4px;background:repeating-linear-gradient(90deg,#1f1f1f 0 2px,transparent 2px 4px,#1f1f1f 4px 5px,transparent 5px 9px,#1f1f1f 9px 12px,transparent 12px 14px,#1f1f1f 14px 17px,transparent 17px 19px)}
+.hcols{display:flex;justify-content:space-between;font-size:11px;font-weight:700;letter-spacing:1.2px;color:#2b2b2b;text-transform:uppercase;margin-top:16px;padding-bottom:4px}
+.li{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;letter-spacing:.5px;text-transform:uppercase;color:#333;line-height:1.6;padding:5px 0}
+.li .nm{display:flex;align-items:baseline}
+.li .frac{font-size:8.5px;text-transform:none;color:#7a4ad0;background:rgba(122,74,208,.1);box-shadow:0 0 0 1px rgba(122,74,208,.28) inset;border-radius:3px;padding:1px 5px;margin-left:8px}
+.li .v{font-variant-numeric:tabular-nums;font-weight:500}
+.grand{display:flex;justify-content:space-between;align-items:baseline;font-size:15px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#1f1f1f;margin-top:16px;border-top:2px solid #1f1f1f;padding-top:14px}
+.grand .v{font-variant-numeric:tabular-nums;font-size:18px}
+.note{text-align:center;font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:#666;margin-top:16px;line-height:1.9}
+.pay{display:block;margin-top:14px;padding:16px;border-radius:11px;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.5px;
+color:#fff;background:linear-gradient(135deg,var(--venmo),#36a8ff);text-align:center;text-decoration:none;font-family:var(--mono);
+box-shadow:0 12px 24px -8px rgba(0,140,255,.6)}
 .pay:active{transform:translateY(1px)}
-.vlogo{font-weight:800;font-style:italic;font-size:18px;letter-spacing:-.5px}
-.assure{text-align:center;font-size:11px;color:#9a968c;margin-top:12px;line-height:1.6}
-.foot{text-align:center;font-size:10px;color:#b3afa4;margin-top:16px;letter-spacing:.03em}
-.foot b{color:#8a877f}
+.foot{text-align:center;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:#999;margin-top:16px}
 </style></head>
-<body><div class="card">
-<div class="tape">BANANASPLIT</div>
-<div class="pad">
-<div class="brand">Your receipt</div>
-<div class="sub">1 spot · settled by Shaian</div>
-<div class="meta">
-<div class="r"><span>FROM</span><b>Shaian</b></div>
-<div class="r"><span>TO</span><b>Hailey</b></div>
-<div class="r"><span>DATE</span><b>Jun 14, 2026</b></div>
-</div>
-<hr class="rule">
-<div class="items"><div class="it"><span>Irish Times<span class="sub2">split 3 ways</span></span><span class="v">$38.24</span></div></div>
-<hr class="rule">
-<div class="tot"><span class="l">You owe</span><span class="v">$38.24</span></div>
-<a class="pay" href="https://venmo.com/?txn=pay&recipients=shaian-javaid&amount=38.24&note=Bananasplit%20-%20Irish%20Times%20split"><span class="vlogo">venmo</span><span>Pay Shaian $38.24</span></a>
-<div class="assure">Opens Venmo to pay Shaian directly.<br>No login, no app to download.</div>
-<div class="foot">Irish Times, split 3 ways with Shaian & Vieri<br><b>powered by bananasplit</b> 🍌</div>
-</div></div></body></html>
+<body><div class="receipt">
+<div class="store">irish times</div>
+<div class="addr">split 3 ways · shaian & vieri</div>
+<div class="meta"><span>Jun 14 2026</span><span>guest: Hailey</span></div>
+<div class="barcode"></div>
+<div class="hcols"><span>Your items</span><span>Share</span></div>
+<div class="li"><span class="nm">Irish Times<span class="frac">1/3</span></span><span class="v">$38.24</span></div>
+<div class="grand"><span>Your share</span><span class="v">$38.24</span></div>
+<div class="note">Your share only · private to you<br>settles securely via venmo</div>
+<a class="pay" href="https://venmo.com/?txn=pay&recipients=shaian-javaid&amount=38.24&note=Bananasplit%20-%20Irish%20Times%20split">Pay Shaian $38.24 on Venmo</a>
+<div class="foot">powered by bananasplit 🍌</div>
+</div></body></html>
